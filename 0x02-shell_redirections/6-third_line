@@ -1,2 +1,2 @@
 #!/bin/bash
-head --lines=-3 iacta
+cat --lines=-3 iacta
