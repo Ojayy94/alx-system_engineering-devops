@@ -1,2 +1,2 @@
 #!/bin/bash
-cat --lines=-2 iacta
+head -n 2 iacta
