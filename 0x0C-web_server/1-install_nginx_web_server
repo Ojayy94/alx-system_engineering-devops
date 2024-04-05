@@ -11,7 +11,7 @@
 # You can’t use systemctl for restarting nginx
 
 apt update
-apt get install -y nginx
+apt install -y nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
 service nginx restart

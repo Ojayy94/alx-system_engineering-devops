@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Ionfigure Nginx so that its HTTP response contains
-# a custom header
-#
+# Configure Nginx so that its HTTP response contains a custom header
 
-# Update packages
+# To Update packages
 sudo apt update
 
 # Add HAProxy PPA
@@ -25,8 +23,8 @@ frontend="$fname\n\t$fbind\n\t$fmode\n\t$fdefault\n"
 
 bname="backend web-backend"
 bbalance="balance roundrobin"
-bserver1="server web1 35.229.93.37:80 check"
-bserver2="server web2 54.196.213.127:80 check"
+bserver1="server web1 54.237.45.29:80 check"
+bserver2="server web2 34.207.222.149:80 check"
 backend="$bname\n\t$bbalance\n\t$bserver1\n\t$bserver2"
 
 sudo sed -i "$ a $frontend" $hgproxy_conf_file
